@@ -1,22 +1,10 @@
 // This is file contain the all class of this game 
 #include"header_file.h"
+#include"class_header.h"
 using namespace std ; 
 
 // NOw we are declaring the all three class for our game 
-class player
-// Player class for store detaiks of a player 
-{
-public:
-string name ; 
-int id ; 
-int runscored ;
-int bowlplayed ;
-int bowlbolwed ; 
-int rungiven ; 
-int wicket ; 
-player();/*constructor*/
-    
-};
+
 
 player::player()
 {
@@ -29,36 +17,15 @@ player::player()
   wicket=0;
 }
 
-class team 
-// Team class define for store the details of the team 
+void game :: show_all_player_name()
 {
-
-public:
-string team_name ; 
-int teambowlbowled ; 
-int teamscored ;
-int totalwicket ; 
-vector<player>player_details ;
-team(); /*constructor */
-};
-
-class game
-// This game class store the details of the game 
-{
-
-public:
-game();
-       team teamA , teamB ;
-       team *bowlling_team , *batting_team ;
-       team *bowler ,  *batsman ; 
-       bool firstining ; 
-       int maxballs ;
-       int per_team_player ;
-       int max_player ; 
-       string playerlist[11] ;
-
-
-};
+  cout<<"\t \t \t \t \t \t \t \t Total 11 players are :- "<<endl ;
+  for (int i = 0; i < max_player; i++)
+  {
+    cout<<"["<<i<<"]"<<"."<< playerlist[i]<<endl ;
+  }
+  
+}
 game::game()
 {
   firstining=false ;
