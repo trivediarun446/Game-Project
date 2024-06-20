@@ -52,6 +52,11 @@ game();
        team *bowlling_team , *batting_team ;
        team *bowler ,  *batsman ; 
        bool firstining ; 
+       int maxballs ;
+       int per_team_player ;
+       int max_player ; 
+       string playerlist[11] ;
+
 
 };
 game::game()
@@ -59,5 +64,19 @@ game::game()
   firstining=false ;
   teamA.team_name=" Team-A";
   teamB.team_name="Team-B ";
+  maxballs= 6;
+  max_player=11;
+  per_team_player=4;
+  playerlist[0]="Rohit";
+  playerlist[1]="Dhawan";
+  playerlist[2]="Virat";
+  playerlist[3]="Raina";
+  playerlist[4]="Dhoni";
+  playerlist[5]="Yuvraj";
+  playerlist[6]="Hardik";
+  playerlist[7]="Sami";
+  playerlist[8]="Jadeja";
+  playerlist[9]="Ishant";
+  playerlist[10]="Bumrah";
   
 }
