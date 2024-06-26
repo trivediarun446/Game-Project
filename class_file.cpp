@@ -115,7 +115,7 @@ void game::select_player()
 }
 game::game()
 {
-  firstining = false;
+  isfirstining = false;
   teamA.team_name = " Team-A";
   teamB.team_name = "Team-B ";
   maxballs = 6;
@@ -150,5 +150,76 @@ void game :: showallselectedplayer()
 }
 void game :: toss()
 {
+  cout<<"Tossing...."<<endl ;
+  int random_value = rand() % 2 ;
+  switch (random_value)
+  {
+  case 0:
+    cout<<"Team A won the toss"<<endl ;
+    tosschoise(teamA);
+    break;
+  case 1:
+    cout<<"Team B won the toss"<<endl ;
+    tosschoise(teamB);
+    break;
   
+  }
+}
+void game :: tosschoise(team tosswinnerteam)
+{
+  cout<<"select the 1 and 2 "<<endl ;
+  cout<<" 1 is for batting choise "<<endl ;
+  cout<<"2 is for balling choise "<<endl ;
+
+  int tossvalue = take_user_index_input();
+  switch (tossvalue)
+  {
+  case 1:
+    cout<<tosswinnerteam.team_name<<"won the toss and choise to bat frist "<<endl ;
+    if (tosswinnerteam.team_name.compare("team-A")==0)
+    {
+      // if Team _ A won the toss 
+      bowlling_team=&teamA;
+      batting_team=&teamB ;
+    }
+    else 
+    {
+      // If team-B won the toss 
+      bowlling_team=&teamB;
+      batting_team=&teamA;
+    }
+    break;
+  case 2 :
+  cout<<tosswinnerteam.team_name<<"won the toss and choise to ball frist "<<endl ;
+   if (tosswinnerteam.team_name.compare("team-A")==0)
+    {
+      // If team -A won the toss 
+      bowlling_team=&teamA;
+      batting_team=&teamB ;
+    }
+    else 
+    {
+      // If team - B won the toss 
+      bowlling_team=&teamB;
+      batting_team=&teamA;
+    }
+  default:
+  cout<<"please Enter the correct value "<<endl ;
+  tosschoise(tosswinnerteam);
+    break;
+  }
+
+}
+void game :: fristiningstart()
+{
+  isfirstining=true;
+  initialisedplayer();
+}
+void game :: initialisedplayer()
+{
+  batsman = &batting_team -> player_details[0];
+  bowler = &bowlling_team-> player_details[0];
+
+  cout<<batting_team->team_name << batsman -> name << endl ;
+  cout<<bowlling_team-> team_name <<bowler -> name << endl ;
 }

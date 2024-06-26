@@ -36,7 +36,7 @@ public:
        team teamA , teamB ;
        team *bowlling_team , *batting_team ;
        team *bowler ,  *batsman ; 
-       bool firstining ; 
+       bool isfirstining ; 
        int maxballs ;
        int player_per_team ;
        int max_player ; 
@@ -47,4 +47,8 @@ public:
        bool validatefunction(int);
        void showallselectedplayer();
        void toss();
+       void tosschoise(team);/*Here this fucntion take team as object parameter*/
+       void fristiningstart();
+       void initialisedplayer();
+
 };

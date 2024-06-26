@@ -34,5 +34,7 @@ int main ()
     enterkey();
     cout<<"\t \t \t \t \t \t \t \t \t Lets Toss the coin "<<endl ;
     enterkey();
+    details.toss();
+    details.fristiningstart();
     return 0 ;
 }
