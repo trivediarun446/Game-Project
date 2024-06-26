@@ -44,5 +44,7 @@ public:
        void show_all_player_name();
        void select_player();
        int take_user_index_input();
-
+       bool validatefunction(int);
+       void showallselectedplayer();
+       void toss();
 };

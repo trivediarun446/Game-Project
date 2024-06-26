@@ -28,7 +28,11 @@ int main ()
     enterkey();
     details.show_all_player_name();
     enterkey();
-    details.select_player();   
-    
+    details.select_player();
+    enterkey();   
+    details.showallselectedplayer();
+    enterkey();
+    cout<<"\t \t \t \t \t \t \t \t \t Lets Toss the coin "<<endl ;
+    enterkey();
     return 0 ;
 }
