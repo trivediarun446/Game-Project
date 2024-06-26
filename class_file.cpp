@@ -47,19 +47,32 @@ void game:: select_player()
     // Add players to team A
     cout<<endl<<"select player"<<i+1<<"of team A-";
     int playerIndexTeamA = take_user_index_input() ;
+    if(playerIndexTeamA>0||playerIndexTeamA>10)
+    {
+      cout<<"enter the valid input"<<endl ;
+    }
+    else {
     player team_A_player ;
     team_A_player.id=playerIndexTeamA ;
     team_A_player.name = playerlist[playerIndexTeamA];
     teamA.player_details.push_back(team_A_player);
+    }
+    
 
     // Add players to team B
     cout<<endl<<"select player"<<i+1<<"of team B-";
+
     int playerIndexTeamB = take_user_index_input() ;
+    if (playerIndexTeamB<0||playerIndexTeamB>10)
+    {
+      cout<<"enter the correct value "<<endl ;
+    }
+    else {
     player team_B_player ;
     team_B_player.id=playerIndexTeamB ;
     team_B_player.name = playerlist[playerIndexTeamB];
     teamB.player_details.push_back(team_B_player);
-
+    }
   }
   
 }
