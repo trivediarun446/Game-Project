@@ -26,6 +26,20 @@ void game :: show_all_player_name()
   }
   
 }
+void game:: select_player()
+{
+
+  cout<<endl ;
+  cout<<"Here select the member of Team A and Team B"<<endl ;
+  for (int i = 0; i < per_team_player; i++)
+  {
+    
+    cout<<endl<<"select player"<<i+1<<"of team A";
+    int playerIndexTeamA = take_user_index_input() ;
+    
+  }
+  
+}
 game::game()
 {
   firstining=false ;

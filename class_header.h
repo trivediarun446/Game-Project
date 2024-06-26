@@ -42,6 +42,14 @@ public:
        int max_player ; 
        std::string playerlist[11] ;
        void show_all_player_name();
-
+       void select_player();
+       int take_user_index_input();
 
 };
+int game:: take_user_index_input()
+{
+     int n ; 
+    //  This is the user input of an index of player list 
+   std:: cin >> n ; 
+ return n ;   
+}

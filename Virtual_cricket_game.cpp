@@ -26,5 +26,7 @@ int main ()
     game details ;
     welcome();
     details.show_all_player_name();
+    enterkey();
+    
     return 0 ;
 }
