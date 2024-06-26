@@ -7,8 +7,8 @@ public:
 std ::string name ; 
 int id ; 
 int runscored ;
-int bowlplayed ;
-int bowlbolwed ; 
+int ballsplayed ;
+int ballsbolwed ; 
 int rungiven ; 
 int wicket ; 
 player();/*constructor*/
@@ -20,9 +20,9 @@ class team
 
 public:
 std::string team_name ; 
-int teambowlbowled ; 
-int teamscored ;
-int totalwicket ; 
+int teambollsbowled ; 
+int team_runs_scored ;
+int total_wicket_lost ; 
 std::vector<player>player_details ;
 team(); /*constructor */
 };
@@ -38,7 +38,7 @@ public:
        team *bowler ,  *batsman ; 
        bool firstining ; 
        int maxballs ;
-       int per_team_player ;
+       int player_per_team ;
        int max_player ; 
        std::string playerlist[11] ;
        void show_all_player_name();
@@ -46,10 +46,3 @@ public:
        int take_user_index_input();
 
 };
-int game:: take_user_index_input()
-{
-     int n ; 
-    //  This is the user input of an index of player list 
-   std:: cin >> n ; 
- return n ;   
-}

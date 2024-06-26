@@ -25,8 +25,10 @@ int main ()
 {
     game details ;
     welcome();
+    enterkey();
     details.show_all_player_name();
     enterkey();
+    details.select_player();   
     
     return 0 ;
 }
